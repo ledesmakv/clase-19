@@ -1,0 +1,68 @@
+.main {
+    background-color: hotpink;
+
+    /* es una mala práctica establecer una altura bien definida ya que no todos los disp. tienen la misma res. */
+    height: 200px;
+
+    display: flex;
+    flex-wrap: wrap;
+    
+    /* con flex, los elementos se vuelven flexibles, por defecto la dirección de los elem. dle HTML es ROW, LEFT y TOP (justify-content: flex-start / flex-direction: row / align-items: flex-start) */
+    
+    /* flex-start != flex-end */
+    /* también tenemos flex-center */
+    /* align-items: flex-start alinea los elem. al tope de la página */
+
+    /* trata de acomodar los elem. cosa que quepan en el div contenedor */
+    /* flex-direction: column; */
+
+    /* cuando las cosas están en row, justify-content me las ordena en el eje X */
+    /* cuando las cosas están en column, justify-content me las ordena en el eje Y */
+
+    /* flex hereda de padre a hijo, no se hereda más allá de esa relación */
+}
+
+.card {
+    /* parar que el elem. no-flex sea flexible, agregamos display: flex a las cartas contenedoras */
+    background-color: aquamarine;
+    width: 200px;
+    height: 150px;
+    border: 2px solid black;
+}
+
+/* #no-flex {
+    background-color: violet;
+    width: 100px;
+    height: 100px;
+    flex-wrap: wrap;
+} */
+
+/* justify-content: space-around */
+/* justify-content: space-between estira los elemen lo más que pueda al extremo de su container */
+/* justify-content: space-evenly deja un pequeño margen, el margen que deje a los costados va a ser exactamente igual al margen entre los elem. */
+
+/* flex: wrap "cuando algo no entre, lo voy a tirar para abajo" respeta el ancho que yo defina de los elem. */
+
+
+
+/* *********** */
+/* Media Query */
+/* *********** */
+
+
+
+/* media query sabe la cantidad de px que tiene mi pantalla */
+/* en gral. los celulares tienen un tamaño max. de 600px */
+/* funciona como un conditional */
+/* la media query tiene más especificidad */
+
+@media (max-width: 600px) {
+    .main {
+        /* para pisar el display: flex */
+        /* display: block; */
+        flex-wrap: nowrap;
+    }
+    .card {
+        background-color: greenyellow;
+    }
+}

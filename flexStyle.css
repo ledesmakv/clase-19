@@ -1,0 +1,19 @@
+.main{
+    display:flex;
+    justify-content: space-evenly;
+  
+    
+    
+}
+.card{
+    border: 2px solid black;
+   margin: 10px;
+}
+
+.card-photo img{
+    width: 100%;
+    height: auto;
+}
+.card-title{
+    text-align: center;
+}
